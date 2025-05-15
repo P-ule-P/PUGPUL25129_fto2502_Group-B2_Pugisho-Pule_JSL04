@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets\favicon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts.js" defer></script>
+    <title>Career Development Plan</title>
+  </head>
+  <body>
+    <!--------------- Navigation Sidebar --------------->
+    <nav>
+      <img src="assets\logo-light.svg" alt="Kanban Logo" class="logo" />
+      <div class="nav-item">
+        <h6>ALL BOARDS (1)</h6>
+      </div>
+      <div>
+        <button>
+          <p id="button-text">Launch Career</p>
+        </button>
+      </div>
+    </nav>
+
+    <!--------------- Header --------------->
+    <header>
+      <div>
+        <h1>
+          <span
+            ><img
+              src="assets\favicon.svg"
+              alt="Mobile-only image"
+              class="mobile-only-logo" /></span
+          >Launch Career
+        </h1>
+      </div>
+    </header>
+
+    <!--------------- Section Columns --------------->
+    <!-- TODO Column -->
+    <section class="task-todo">
+      <div>
+        <h6><span class="status-todo"></span>TODO (4)</h6>
+      </div>
+      <!-- Tasks container for TODO -->
+      <ul>
+        <li>
+          <p><a href="#">Launch Epic Career 🚀</a></p>
+        </li>
+        <li>
+          <p><a href="#">Understand Databases ⚙️</a></p>
+        </li>
+        <li>
+          <p><a href="#">Crush Frameworks 🖼️</a></p>
+        </li>
+        <li>
+          <p><a href="#">Conquer React ⚛️</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- DOING Column -->
+    <section class="task-doing">
+      <div>
+        <h6><span class="status-doing"></span>DOING (2)</h6>
+      </div>
+      <!-- Tasks container for DOING -->
+      <ul>
+        <li>
+          <p><a href="#">Master JavaScript 💛</a></p>
+        </li>
+        <li>
+          <p><a href="#">Never Give Up 🏆</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- DONE Column -->
+    <section class="task-done">
+      <div>
+        <h6><span class="status-done"></span>DONE (2)</h6>
+      </div>
+      <!-- Tasks container for DONE -->
+      <ul>
+        <li>
+          <p><a href="#">Explore ES6 Features 🚀</a></p>
+        </li>
+        <li>
+          <p><a href="#">Have fun 🥳</a></p>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
