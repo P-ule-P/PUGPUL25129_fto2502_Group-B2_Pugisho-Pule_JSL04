@@ -57,7 +57,7 @@ A simple, JavaScript-driven Kanban board tailored for monitoring career growth m
 
 3. Modify task details directly in the modal's input fields, changes cannot be saved yet so that they can appear on the task cards.
 
-4. Close the modal by clicking the red ✖ button (top-right) or anywhere outside the modal window.
+4. Close the modal by clicking the red ❌ button (top-right) or anywhere outside the modal window.
 
 5. The responsive design works seamlessly across mobile and desktop browsers without requiring console interactions.
 
