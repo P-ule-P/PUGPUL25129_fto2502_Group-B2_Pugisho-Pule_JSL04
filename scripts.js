@@ -1,4 +1,12 @@
-// Intilize Task board
+/**
+ * Initial dataset of career development tasks with their metadata.
+ * @type {Array<{
+ *   id: number,
+ *   title: string,
+ *   description: string,
+ *   status: 'todo'|'doing'|'done'
+ * }>}
+ */
 const initialTasks = [
   {
     id: 1,
@@ -41,13 +49,23 @@ const initialTasks = [
   },
 ];
 
-// Initialize the task board when DOM content is fully loaded
+/**
+ * Initializes the application when DOM content is fully loaded.
+ * @listens document:DOMContentLoaded
+ * @returns {void}
+ */
 document.addEventListener("DOMContentLoaded", () => {
   initializeTasks();
   setupTaskModal();
 });
 
-// Fills tasks in the rightful columns based on their task IDs
+/**
+ * Renders tasks into their respective columns based on status.
+ * Matches DOM elements with data-task-id attributes to tasks in initialTasks.
+ * Creates paragraph elements for task titles and attaches click handlers.
+ * @function
+ * @returns {void}
+ */
 function initializeTasks() {
   // Find all list items with task IDs
   const taskListItems = document.querySelectorAll("li[data-task-id]");
@@ -73,12 +91,19 @@ function initializeTasks() {
   });
 }
 
-// Sets up the task modal dialog and its event handlers
+/**
+ * Configures the task modal dialog behavior.
+ * Sets up:
+ * - Click-outside-to-close functionality
+ * - Close button event handling
+ * @function
+ * @returns {void}
+ */
 function setupTaskModal() {
   const modal = document.getElementById("taskModal");
   if (!modal) return;
 
-  // Sets up click outside to close behavior
+  // Close modal when clicking outside its content
   modal.addEventListener("click", (e) => {
     const rect = modal.getBoundingClientRect();
     const isInDialog =
@@ -92,6 +117,7 @@ function setupTaskModal() {
     }
   });
 
+  // Close modal when clicking the X button
   const closeBtn = modal.querySelector(".close-btn");
   if (closeBtn) {
     closeBtn.addEventListener("click", (e) => {
@@ -101,7 +127,16 @@ function setupTaskModal() {
   }
 }
 
-// Opens the task modal with the selected task data
+/**
+ * Opens and populates the task editing modal with selected task's data.
+ * @function
+ * @param {Object} task - The task object to display
+ * @param {number} task.id - The task's unique identifier
+ * @param {string} task.title - The task's title text
+ * @param {string} task.description - The task's detailed description
+ * @param {'todo'|'doing'|'done'} task.status - The task's current status
+ * @returns {void}
+ */
 function openTaskModal(task) {
   const modal = document.getElementById("taskModal");
   const titleInput = document.getElementById("task-title");
@@ -118,6 +153,6 @@ function openTaskModal(task) {
   // Store the current task ID for reference
   modal.dataset.taskId = task.id;
 
-  // Display the modal
+  // Display the modal dialog
   modal.showModal();
 }
