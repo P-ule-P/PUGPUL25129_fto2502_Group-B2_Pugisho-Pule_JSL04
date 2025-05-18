@@ -28,6 +28,32 @@
       </div>
     </nav>
 
+    <!--------------- Task Modal --------------->
+    <dialog id="taskModal" class="task-dialog">
+      <form method="dialog" class="task-form">
+        <div class="modal-header">
+          <h2 class="modal-title">Task</h2>
+          <button type="button" class="close-btn" aria-label="Close">✖</button>
+        </div>
+        <label>
+          Title
+          <input type="text" id="task-title" />
+        </label>
+        <label>
+          Description
+          <textarea id="task-desc" rows="4"></textarea>
+        </label>
+        <label>
+          Status
+          <select id="task-status">
+            <option value="todo">todo</option>
+            <option value="doing">doing</option>
+            <option value="done">done</option>
+          </select>
+        </label>
+      </form>
+    </dialog>
+
     <!--------------- Header --------------->
     <header>
       <div>
@@ -50,17 +76,13 @@
       </div>
       <!-- Tasks container for TODO -->
       <ul>
+        <li data-task-id="1"></li>
+        <li data-task-id="2"></li>
         <li>
-          <p><a href="#">Launch Epic Career 🚀</a></p>
+          <p>Crush Frameworks 🖼️</p>
         </li>
         <li>
-          <p><a href="#">Understand Databases ⚙️</a></p>
-        </li>
-        <li>
-          <p><a href="#">Crush Frameworks 🖼️</a></p>
-        </li>
-        <li>
-          <p><a href="#">Conquer React ⚛️</a></p>
+          <p>Conquer React ⚛️</p>
         </li>
       </ul>
     </section>
@@ -72,12 +94,8 @@
       </div>
       <!-- Tasks container for DOING -->
       <ul>
-        <li>
-          <p><a href="#">Master JavaScript 💛</a></p>
-        </li>
-        <li>
-          <p><a href="#">Never Give Up 🏆</a></p>
-        </li>
+        <li data-task-id="3"></li>
+        <li data-task-id="11"></li>
       </ul>
     </section>
 
@@ -88,12 +106,8 @@
       </div>
       <!-- Tasks container for DONE -->
       <ul>
-        <li>
-          <p><a href="#">Explore ES6 Features 🚀</a></p>
-        </li>
-        <li>
-          <p><a href="#">Have fun 🥳</a></p>
-        </li>
+        <li data-task-id="12"></li>
+        <li data-task-id="13"></li>
       </ul>
     </section>
   </body>
